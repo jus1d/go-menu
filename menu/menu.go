@@ -60,7 +60,6 @@ func (m *Menu) Choose() {
 			}
 		case keyboard.KeyEnter:
 			m.chosenPoint = selected
-			fmt.Printf("Choosed: %s\n", m.options[selected])
 			return
 		}
 
@@ -69,8 +68,8 @@ func (m *Menu) Choose() {
 	}
 }
 
-func (m *Menu) GetChosenAnswer() int {
-	return m.chosenPoint
+func (m *Menu) GetChosenAnswer() (int, string) {
+	return m.chosenPoint, m.options[m.chosenPoint]
 }
 
 func (m *Menu) print(chosenPoint int) {

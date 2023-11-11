@@ -1,11 +1,16 @@
 package main
 
-import "go-menu/menu"
+import (
+	"fmt"
+	"go-menu/menu"
+)
 
 func main() {
-	mn, _ := menu.New("This is a 1 option", "This is a 2nd option", "Tis is a third option")
+	mn, _ := menu.New("First option here", "Second option performed here", "It's third option")
 
 	mn.Choose()
 
-	mn.GetChosenAnswer()
+	chosen, option := mn.GetChosenAnswer()
+
+	fmt.Printf("Choosed option number: %d, it's text: %d", chosen, option)
 }
