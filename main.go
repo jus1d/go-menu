@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-menu/menu"
+	"github.com/jus1d/go-menu/menu"
 )
 
 func main() {

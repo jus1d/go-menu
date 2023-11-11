@@ -1,4 +1,4 @@
-module go-menu
+module github.com/jus1d/go-menu
 
 go 1.21
 
