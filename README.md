@@ -23,6 +23,6 @@ func main() {
 
 	chosen, option := mn.GetChosenAnswer()
 
-  fmt.Printf("Choosed option number: %d, it's text: %d", chosen, option)
+  fmt.Printf("Choosed option number: %d, it's text: %s", chosen, option)
 }
 ```
