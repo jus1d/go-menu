@@ -14,8 +14,6 @@ type Menu struct {
 
 var ErrNoOptions = errors.New("at least 1 option should be provided")
 
-var cyan = color.New(color.FgCyan).SprintFunc()
-
 func New(options ...string) (*Menu, error) {
 	if len(options) == 0 {
 		return nil, ErrNoOptions
@@ -73,6 +71,8 @@ func (m *Menu) GetChosenAnswer() (int, string) {
 }
 
 func (m *Menu) print(chosenPoint int) {
+	var cyan = color.New(color.FgCyan).SprintFunc()
+
 	fmt.Println("Choose an option:")
 
 	for i, option := range m.options {
